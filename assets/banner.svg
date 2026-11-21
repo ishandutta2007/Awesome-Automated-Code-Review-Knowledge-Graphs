@@ -42,6 +42,7 @@
   </defs>
 
   <style>
+    <![CDATA[
     .title-text {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       font-weight: 800;
@@ -82,11 +83,11 @@
     }
 
     .orb-blue {
-      transform-origin: 200px 100px;
+      transform-origin: 220px 120px;
       animation: pulseOrb 8s ease-in-out infinite;
     }
     .orb-purple {
-      transform-origin: 1000px 280px;
+      transform-origin: 980px 270px;
       animation: pulsePurple 9s ease-in-out infinite;
     }
     .stream-line {
@@ -97,6 +98,7 @@
     .pill-floating-2 { animation: floatPill 6s ease-in-out infinite 1s; }
     .pill-floating-3 { animation: floatPill 5.5s ease-in-out infinite 2s; }
     .pill-floating-4 { animation: floatPill 6.5s ease-in-out infinite 0.5s; }
+    ]]>
   </style>
 
   <!-- Deep Canvas Background -->
