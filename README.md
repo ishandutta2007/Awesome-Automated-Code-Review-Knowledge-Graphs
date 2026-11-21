@@ -7,7 +7,7 @@
 <p align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://awesome.re/badge.svg" alt="Mentioned in Awesome-Awesome-Awesome" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Automated-Code-Review-Knowledge-Graphs/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Automated-Code-Review-Knowledge-Graphs?style=flat-square&logo=github" alt="GitHub Stars" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Automated-Code-Review-Knowledge-Graphs/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Automated-Code-Review-Knowledge-Graphs?style=flat-square&logo=github" alt="GitHub_Stars" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Automated-Code-Review-Knowledge-Graphs/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Automated-Code-Review-Knowledge-Graphs?style=flat-square&logo=github" alt="GitHub Forks" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Automated-Code-Review-Knowledge-Graphs/blob/main/LICENSE"><img src="https://img.shields.io/github/license/ishandutta2007/Awesome-Automated-Code-Review-Knowledge-Graphs?style=flat-square" alt="License" /></a>
   <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
@@ -65,77 +65,77 @@ A comparison of leading hosted automated code review, PR analysis, and developer
 
 Self-hosted, transparent, and community-driven tools for automated code review, AST knowledge graph indexing, and PR workflow automation. 🛠️
 
-> **Sorted in descending order by GitHub Stars.** Each repository name includes a real-time star badge linking directly to the repository's stargazers. ⭐
+> **Sorted in descending order by GitHub_Stars.** Each repository name includes a real-time Stars_Badge linking directly to the repository's stargazers. ⭐
 
-- ### [codegraph](https://github.com/colbymchenry/codegraph) [![GitHub stars](https://img.shields.io/github/stars/colbymchenry/codegraph?style=social&color=white)](https://github.com/colbymchenry/codegraph/stargazers)
+- ### [codegraph](https://github.com/colbymchenry/codegraph) [![GitHub_Stars](https://img.shields.io/github/stars/colbymchenry/codegraph?style=social&color=white)](https://github.com/colbymchenry/codegraph/stargazers)
   **Pre-indexed code knowledge graph for local and cloud AI coding agents.**  
   Auto-syncs on source code changes to feed Claude Code, Codex, Gemini, Cursor, and OpenCode with localized structural intelligence. Provides ~100% local operation with dramatic token overhead reduction and minimal tool calls. ⚡
 
-- ### [code-review-graph](https://github.com/tirth8205/code-review-graph) [![GitHub stars](https://img.shields.io/github/stars/tirth8205/code-review-graph?style=social&color=white)](https://github.com/tirth8205/code-review-graph/stargazers)
+- ### [code-review-graph](https://github.com/tirth8205/code-review-graph) [![GitHub_Stars](https://img.shields.io/github/stars/tirth8205/code-review-graph?style=social&color=white)](https://github.com/tirth8205/code-review-graph/stargazers)
   **Local-first code knowledge graph for AI agents and risk-scored PR reviews.**  
   Builds a persistent SQLite graph of functions, classes, imports, and calls using Tree-sitter without requiring an external database. Emits sticky GitHub Action comments with symbol-level risk scoring, execution flows, and test gap analysis. Yields ~63x median per-question token reduction for MCP coding agents. 🕸️
 
-- ### [tree-sitter](https://github.com/tree-sitter/tree-sitter) [![GitHub stars](https://img.shields.io/github/stars/tree-sitter/tree-sitter?style=social&color=white)](https://github.com/tree-sitter/tree-sitter/stargazers)
+- ### [tree-sitter](https://github.com/tree-sitter/tree-sitter) [![GitHub_Stars](https://img.shields.io/github/stars/tree-sitter/tree-sitter?style=social&color=white)](https://github.com/tree-sitter/tree-sitter/stargazers)
   **The parsing engine foundation for modern codebase knowledge graphs.**  
   An incremental parsing system that builds concrete syntax trees (CST/AST) for source files across dozens of programming languages. Serves as the core syntax indexing engine powering `code-review-graph`, `codegraph`, `okf-generator`, and automated code review AST parsers. 🌲
 
-- ### [semgrep](https://github.com/semgrep/semgrep) [![GitHub stars](https://img.shields.io/github/stars/semgrep/semgrep?style=social&color=white)](https://github.com/semgrep/semgrep/stargazers)
+- ### [semgrep](https://github.com/semgrep/semgrep) [![GitHub_Stars](https://img.shields.io/github/stars/semgrep/semgrep?style=social&color=white)](https://github.com/semgrep/semgrep/stargazers)
   **Lightweight static analysis engine for code review and security enforcement.**  
   Fast, syntax-aware pattern matching for searching code and enforcing secure coding standards in CI/CD pipelines. Uses code-like syntax instead of complex AST queries to detect bugs, CVEs, and compliance issues on every pull request. 🔎
 
-- ### [pr-agent](https://github.com/qodo-ai/pr-agent) [![GitHub stars](https://img.shields.io/github/stars/qodo-ai/pr-agent?style=social&color=white)](https://github.com/qodo-ai/pr-agent/stargazers)
+- ### [pr-agent](https://github.com/qodo-ai/pr-agent) [![GitHub_Stars](https://img.shields.io/github/stars/qodo-ai/pr-agent?style=social&color=white)](https://github.com/qodo-ai/pr-agent/stargazers)
   **Open-source autonomous AI agent for pull request review and analysis.**  
   Posts inline PR code suggestions, generates structured pull request descriptions, answers natural language questions on code diffs, and evaluates PR compliance across GitHub, GitLab, and Bitbucket. Supports custom LLM endpoints (Ollama, LiteLLM, OpenAI, Anthropic). 🤖
 
-- ### [infer](https://github.com/facebook/infer) [![GitHub stars](https://img.shields.io/github/stars/facebook/infer?style=social&color=white)](https://github.com/facebook/infer/stargazers)
+- ### [infer](https://github.com/facebook/infer) [![GitHub_Stars](https://img.shields.io/github/stars/facebook/infer?style=social&color=white)](https://github.com/facebook/infer/stargazers)
   **Static analyzer for Java, C, C++, and Objective-C by Meta.**  
   Employs deep formal methods (separation logic) to find critical memory leaks, null pointer exceptions, and concurrency race conditions before code lands in production. Widely integrated into automated commit and PR gating pipelines. 🔬
 
-- ### [sonarqube](https://github.com/SonarSource/sonarqube) [![GitHub stars](https://img.shields.io/github/stars/SonarSource/sonarqube?style=social&color=white)](https://github.com/SonarSource/sonarqube/stargazers)
+- ### [sonarqube](https://github.com/SonarSource/sonarqube) [![GitHub_Stars](https://img.shields.io/github/stars/SonarSource/sonarqube?style=social&color=white)](https://github.com/SonarSource/sonarqube/stargazers)
   **Continuous code quality, vulnerability inspection, and static analysis.**  
   Analyzes 20+ languages to flag bugs, security hotspots, code smells, and technical debt. Connects directly to GitHub, GitLab, and Azure DevOps pull requests with SARIF report ingestion and customizable quality gates. 📊
 
-- ### [reviewdog](https://github.com/reviewdog/reviewdog) [![GitHub stars](https://img.shields.io/github/stars/reviewdog/reviewdog?style=social&color=white)](https://github.com/reviewdog/reviewdog/stargazers)
+- ### [reviewdog](https://github.com/reviewdog/reviewdog) [![GitHub_Stars](https://img.shields.io/github/stars/reviewdog/reviewdog?style=social&color=white)](https://github.com/reviewdog/reviewdog/stargazers)
   **Automated code review runner with unified diff reporting.**  
   Integrates any linter or static analysis tool with code review services. Automatically parses linter output and posts inline comments directly on GitHub Pull Requests, GitLab Merge Requests, and Bitbucket PRs. 🐶
 
-- ### [danger](https://github.com/danger/danger) [![GitHub stars](https://img.shields.io/github/stars/danger/danger?style=social&color=white)](https://github.com/danger/danger/stargazers)
+- ### [danger](https://github.com/danger/danger) [![GitHub_Stars](https://img.shields.io/github/stars/danger/danger?style=social&color=white)](https://github.com/danger/danger/stargazers)
   **Automate team pull request review conventions & chore policies.**  
   Codifies social team norms during code review (e.g., verifying changelog updates, enforcing test coverage, checking PR size, and auditing milestone tags) with native comments on GitHub and GitLab. 🚦
 
-- ### [codesearch](https://github.com/google/codesearch) [![GitHub stars](https://img.shields.io/github/stars/google/codesearch?style=social&color=white)](https://github.com/google/codesearch/stargazers)
+- ### [codesearch](https://github.com/google/codesearch) [![GitHub_Stars](https://img.shields.io/github/stars/google/codesearch?style=social&color=white)](https://github.com/google/codesearch/stargazers)
   **Fast, regular-expression-based search indexing over massive codebases.**  
   Google's trigram indexing engine for navigating large-scale source repositories. Used as a reference implementation for regex code navigation and high-speed structural symbol lookups. 🔍
 
-- ### [kythe](https://github.com/google/kythe) [![GitHub stars](https://img.shields.io/github/google/kythe?style=social&color=white)](https://github.com/google/kythe/stargazers)
+- ### [kythe](https://github.com/google/kythe) [![GitHub_Stars](https://img.shields.io/github/google/kythe?style=social&color=white)](https://github.com/google/kythe/stargazers)
   **Pluggable developer tools platform for code analysis and cross-reference graphs.**  
   Google's ecosystem for creating and querying language-agnostic code graphs. Captures definitions, references, call graphs, and type hierarchies across multi-language enterprise repositories. 🏛️
 
-- ### [scip](https://github.com/sourcegraph/scip) [![GitHub stars](https://img.shields.io/github/stars/sourcegraph/scip?style=social&color=white)](https://github.com/sourcegraph/scip/stargazers)
+- ### [scip](https://github.com/sourcegraph/scip) [![GitHub_Stars](https://img.shields.io/github/stars/sourcegraph/scip?style=social&color=white)](https://github.com/sourcegraph/scip/stargazers)
   **SCIP Code Intelligence Protocol by Sourcegraph.**  
   A modern, language-agnostic protocol for indexing source code symbol graphs, cross-references, and type relationships. Powers precise jump-to-definition, find-references, and code navigation in review workflows. 🌐
 
-- ### [graphicle](https://github.com/Graphicle-AI/graphicle) [![GitHub stars](https://img.shields.io/github/stars/Graphicle-AI/graphicle?style=social&color=white)](https://github.com/Graphicle-AI/graphicle/stargazers)
+- ### [graphicle](https://github.com/Graphicle-AI/graphicle) [![GitHub_Stars](https://img.shields.io/github/stars/Graphicle-AI/graphicle?style=social&color=white)](https://github.com/Graphicle-AI/graphicle/stargazers)
   **Rust-native code graph and project memory system over MCP.**  
   Combines architectural symbol graphs with historical review decisions directly in a single Rust engine. Integrates with coding agents to preserve context and suppress stale review suggestions. 🦀
 
-- ### [RepoLens](https://github.com/TheMorpheus407/RepoLens) [![GitHub stars](https://img.shields.io/github/stars/TheMorpheus407/RepoLens?style=social&color=white)](https://github.com/TheMorpheus407/RepoLens/stargazers)
+- ### [RepoLens](https://github.com/TheMorpheus407/RepoLens) [![GitHub_Stars](https://img.shields.io/github/stars/TheMorpheus407/RepoLens?style=social&color=white)](https://github.com/TheMorpheus407/RepoLens/stargazers)
   **Multi-perspective AI code audit and production readiness evaluation.**  
   Deploys specialized agents across security, architecture, and reliability perspectives. Includes opt-in local learning indexes and plugins for Semgrep, Gitleaks, and OSV. 🧐
 
-- ### [dagayn](https://github.com/manji-0/dagayn) [![GitHub stars](https://img.shields.io/github/stars/manji-0/dagayn?style=social&color=white)](https://github.com/manji-0/dagayn/stargazers)
+- ### [dagayn](https://github.com/manji-0/dagayn) [![GitHub_Stars](https://img.shields.io/github/stars/manji-0/dagayn?style=social&color=white)](https://github.com/manji-0/dagayn/stargazers)
   **Local-first code knowledge graph with multi-backend embeddings.**  
   Parses source files, Markdown, and Terraform infrastructure into an SQLite call graph. Offers FTS-only fast search, local GGUF sidecar embeddings, and remote vector lookups for AI agent review pipelines. 📦
 
-- ### [okf-generator](https://github.com/tommypacker/okf-generator) [![GitHub stars](https://img.shields.io/github/stars/tommypacker/okf-generator?style=social&color=white)](https://github.com/tommypacker/okf-generator/stargazers)
+- ### [okf-generator](https://github.com/tommypacker/okf-generator) [![GitHub_Stars](https://img.shields.io/github/stars/tommypacker/okf-generator?style=social&color=white)](https://github.com/tommypacker/okf-generator/stargazers)
   **Map any codebase into an Open Knowledge Format (OKF) graph for AI agents.**  
   Tree-sitter parser covering 11 languages and 17 package/build manifests. Exports code architectures into GraphML, Neo4j Cypher, Obsidian vaults, and D3 force-directed interactive diagrams. 🗺️
 
-- ### [gfy](https://github.com/qiangli/gfy) [![GitHub stars](https://img.shields.io/github/stars/qiangli/gfy?style=social&color=white)](https://github.com/qiangli/gfy/stargazers)
+- ### [gfy](https://github.com/qiangli/gfy) [![GitHub_Stars](https://img.shields.io/github/stars/qiangli/gfy?style=social&color=white)](https://github.com/qiangli/gfy/stargazers)
   **Go-based code knowledge graph CLI with semantic graph traversal.**  
   CLI tool for calculating shortest symbol paths, fuzzy code queries, and local semantic embeddings via Ollama. Exposes MCP configuration for Claude Code and Cursor. 🐹
 
-- ### [codeKG](https://github.com/eviking/codeKG) [![GitHub stars](https://img.shields.io/github/stars/eviking/codeKG?style=social&color=white)](https://github.com/eviking/codeKG/stargazers)
+- ### [codeKG](https://github.com/eviking/codeKG) [![GitHub_Stars](https://img.shields.io/github/stars/eviking/codeKG?style=social&color=white)](https://github.com/eviking/codeKG/stargazers)
   **Neo4j-backed codebase knowledge graph for AI developer agents.**  
   Parses repository definitions and dependencies into a Neo4j graph database. Generates commit-level `.codekg/INDEX.md` context maps and monitors codebases for incremental re-indexing. 🗄️
 
@@ -168,7 +168,7 @@ Contributions are warmly welcome! 🙌
 1. Fork this repository. 🍴
 2. Add your tool to either the **SaaS / Hosted Platforms** table or the **Open-Source GitHub Projects** list.
    - For SaaS products: provide exact pricing tiers, specific free tier/trial limits, and company scale metrics.
-   - For Open-Source projects: provide the GitHub repository link and ensure the social star badge (`style=social&color=white`) links to `/stargazers`.
+   - For Open-Source projects: provide the GitHub repository link and ensure the social Stars_Badge (`style=social&color=white`) links to `/stargazers`.
 3. Submit a Pull Request with a clear, factual description. ✨
 
 ---
