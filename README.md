@@ -1,6 +1,6 @@
 # Awesome-Automated-Code-Review-Knowledge-Graphs
 
-# Top Automated Code Review & Knowledge Graphs Ecosystem
+## Top Automated Code Review & Knowledge Graphs Ecosystem
 
 **Curated List of SaaS Products & Open-Source GitHub Projects**  
 *Focused on AI-Assisted PR Review, Codebase Knowledge Graphs & Self-Hosted Review Automation*  
