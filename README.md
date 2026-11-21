@@ -1,89 +1,152 @@
-# Awesome-Automated-Code-Review-Knowledge-Graphs
+# Awesome Automated Code Review & Knowledge Graphs [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-## Top Automated Code Review & Knowledge Graphs Ecosystem
+> A curated list of SaaS products, open-source projects, and developer tools for **AI-assisted automated code review**, **pull request (PR) analysis**, and **codebase knowledge graphs**.
 
-**Curated List of SaaS Products & Open-Source GitHub Projects**  
-*Focused on AI-Assisted PR Review, Codebase Knowledge Graphs & Self-Hosted Review Automation*  
-**Last updated: March 2026**
-
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Automated Code Review & Knowledge Graphs**. These tools help teams review pull requests faster and understand codebase structure—covering everything from AI reviewers that post inline comments to local-first knowledge graphs that give coding agents a compressed, queryable map of your entire repository.
-
-**Examples** include CodeRabbit, Qodo, Graphite, Bito, CodeSpy, and code-review-graph (the category leaders).
-
-**Open-source emphasis**: This section highlights every major active project for self-hosted code review automation, open-source knowledge graph builders, and community-driven static analysis—ideal for teams seeking data sovereignty and avoiding per-seat or per-credit SaaS pricing that compounds across engineering headcount. The open-source landscape is genuinely functional: **code-review-graph** builds a local-first knowledge graph with risk-scored PR reviews and ~63x median token reduction for AI agents , **CodeSpy** provides a DSPy-powered CLI review pipeline with native GitHub PR annotations , and **SonarQube Community Build** remains the free, open-source standard for static analysis across 21 languages .
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-## Table of Contents
-- [SaaS/Hosted Platforms](#saas-products)
-- [Open-Source GitHub Projects](#open-source-github-projects)
-- [How to Contribute](#how-to-contribute)
-- [Disclaimer](#disclaimer)
-
-## SaaS/Hosted Platforms
-
-- **[CodeRabbit](https://www.coderabbit.ai/)**  
-  **The most widely adopted AI code review platform with a genuine free tier.** **Free: unlimited public and private repos, PR summarization only** (code reviews via VS Code/CLI) . **Essentials (formerly Pro): $24/dev/mo annual ($30 monthly)** adds PR reviews, Knowledge base, linter/SAST support, analytics, and review fixes . **Team ($48/dev/mo annual)** adds Triage (cross-repo PR queue), Plan, unit test generation, and merge-conflict resolution . **Advanced ($72/dev/mo annual)** adds continuous security review . **Enterprise** adds self-hosting, SSO, RBAC, and audit logging . **OSS projects get Team features free** .
-
-- **[Qodo](https://www.qodo.ai/)**  
-  **Agentic PR review with whole-codebase context.** **Pro Team: $30/mo base** with **pooled credits at $0.015/credit**—no per-seat fee, no repository limits, monthly billing with no commitment . **~14 reviews/mo at 2,000 credits; ~114 reviews/mo at 16,000 credits**; credits expire monthly. **14-day free trial** with unlimited reviews; **no permanent free tier** . Enterprise adds SSO, audit logs, BYOK, and on-prem/air-gapped deployment .
-
-- **[Graphite](https://graphite.com/)**  
-  **Stacked PR workflow with AI review.** **Hobby: free** (personal repos, limited AI reviews). **Starter: $20/user/mo annual** (all GitHub org repos, Slack). **Team: $40/user/mo annual** adds unlimited AI reviews, customizations, and Merge Queue. **Enterprise: custom** (SAML, audit log, GHES, SLAs) .
-
-- **[Bito](https://bito.ai/)**  
-  **AI code reviews priced per seat with LOC-based overage.** **Professional: $20/seat/mo annual ($25 monthly)** includes **5,000 LOC/seat/month**; overage at **$5 per 1,000 LOC** . **Team plan** supports up to 25 seats; Professional/Enterprise unlimited. **Free trial**: 14 days, but **capped at 15 code review executions per user** and **large PRs cannot be manually triggered** .
-
-- **[Reviewpad](https://reviewpad.com/)**  
-  Policy-based review automation with AI. A 2026 independent test cited **$89/month** and found it identified **22 issues with ~19%** of expected coverage—positioned as an MVP-stage tool .
-
-- **[Snyk](https://snyk.io/)**  
-  **Security-focused PR checks rather than general code review.** **Free: $0/mo** for individuals and small teams. **Team: $25/mo per contributing developer** with higher scan limits and issue-tracker workflow . **Ignite: $1,260/year per developer (~$105/mo)** for organizations under 50 developers wanting enterprise features .
-
-- **[Codacy](https://www.codacy.com/)**  
-  **Static analysis with AI auto-fix.** **Free forever: $0** for open-source projects; **Pro: starting ~$18–$21/dev/mo** for up to 30 contributors and 100 private projects . **14-day trial** with full platform access; public repos remain free after trial .
-
-## Open-Source GitHub Projects
-
-- **[code-review-graph](https://github.com/tirth8205/code-review-graph)**  
-  **The most complete open-source local-first code knowledge graph for AI agents and PR review.** **28,554 GitHub stars, 2,649 forks** (as of Aug 2026) . **Builds a persistent SQLite graph** of functions, classes, imports, and calls using Tree-sitter—**no external database or cloud service** . **Risk-scored PR reviews via GitHub Action**: posts a sticky comment with overall risk score, top risk-scored changed symbols, affected execution flows, and test gaps; optional `fail-on-risk` merge gate . **Framework-aware parsing** for Laravel (routes/Eloquent), Spring (DI/routes/events), Temporal, and 30+ languages . **~63x median per-question token reduction** for AI agents vs. whole-corpus reading (range 35x–358x) . **MCP server** for Claude Code, Cursor, and Codex; **no source code sent externally** . **Honest caveat**: 528x is the best-case, not the headline; benchmarks are reproducible but represent specific repos . **Best for teams wanting a self-hosted knowledge graph that makes AI agents dramatically more efficient** while adding risk-scored PR review.
-
-- **[CodeSpy](https://pypi.org/project/codespy-ai/)**  
-  **DSPy-powered CLI review pipeline with native GitHub PR annotations.** **Posts inline review comments** with severity indicators (Critical/High/Medium/Low) and CWE references for security issues . **Parallel review modules** (Security Auditor, Bug Detector, Documentation Reviewer) with LLM-powered deduplication . **Tree-sitter parsing** for multi-language support; **Ripgrep** for code search. **LiteLLM backend** supports Bedrock, OpenAI, Anthropic, Ollama, and any OpenAI-compatible endpoint . **Cost tracker** reports tokens and spend per review . **Best for teams wanting a scriptable, model-agnostic review pipeline** they can run in CI with native GitHub integration.
-
-- **[SonarQube Community Build](https://github.com/SonarSource/sonarqube)**  
-  **The most established free and open-source static analysis platform.** **21 languages** including Java, JavaScript, TypeScript, Python, C#, Go, Ruby, PHP, Rust, Kotlin, and Terraform/Docker/Kubernetes IaC . **Detects bugs, basic vulnerabilities, security hotspots, and hardcoded secrets**; tracks technical debt and code quality history . **CI/CD integration** with GitHub, GitLab, Bitbucket, and Azure DevOps; **SARIF report ingestion** for third-party tools . **50+ community plugins** . **Best for teams wanting a proven, free static analysis foundation** with no seat limits.
-
-### Additional Strong Open-Source Options
-
-- **[okf-generator](https://pypi.org/project/okf-generator/)** — **Map any codebase into an interactive knowledge graph for AI agents, local SLMs, and architectural review.** Tree-sitter parsing for 11 languages and **17 manifest/build formats** (requirements.txt, package.json, Cargo.toml, go.mod, etc.) . **`okf lookup`** queries the graph; **`okf visualize`** renders a D3.js force-directed graph; **MCP server** for agent integration . **Export formats**: GraphML, Neo4j Cypher, Obsidian vault, JSON, SVG . **Best for teams wanting a broad, language-agnostic codebase graph** with multiple export targets—not a PR review tool.
-
-- **[dagayn](https://pypi.org/project/dagayn/)** — **Local-first knowledge graph with configurable embedding backends.** **FTS-only mode** (no model download), **local embedding** via managed BGE-M3 or Qwen3 GGUF sidecars, or **remote embedding** via OpenAI/Google/MiniMax . **`dagayn detect-changes`** and **`visualize`** commands; **MCP server** with workflow-specific tools . **Rust-backed parser** for Markdown, Terraform, Rust, Python, Go, Java, Ruby, C#, PHP, Kotlin, Swift, and more . **Best for teams wanting a graph with flexible embedding options**—including fully offline operation.
-
-- **[gfy](https://pkg.go.dev/github.com/qiangli/gfy)** — **Go-based code knowledge graph CLI with semantic search.** **`gfy query`** supports fuzzy matching and **`--semantic`** embedding-based ranking via Ollama . **`gfy path`** finds shortest paths between nodes; **`gfy view`** opens an interactive graph . **`gfy install`** registers as a Claude Code/Cursor skill and prints MCP config . **Best for Go-centric teams** wanting a lightweight, CLI-first graph tool with semantic search.
-
-- **[RepoLens](https://pypi.org/project/repolens-audit/)** — **AI-powered dual review (security + reliability + architecture) with local-first design.** **`repolens review`** runs full dual review; **`repolens sentinel`** for security-only; **`repolens architecture`** for production-readiness audit . **Plugins** for Semgrep, gitleaks, and OSV (optional, not default install) . **Opt-in local learning index** stays on disk . **Best for teams wanting a multi-perspective audit** rather than a single-lens review.
-
-- **[codeKG](https://github.com/eviking/codeKG)** — **Self-hosted codebase knowledge graph for AI agents.** Indexes Java/Python (and more) into **Neo4j**; serves architectural context via MCP . **Commits a `.codekg/` directory** with `INDEX.md` and module docs into the repo so agents read that first . **Watcher** polls for new commits and re-ingests . **Best for teams already on Neo4j** or wanting a graph persisted in a dedicated database rather than SQLite.
-
-**Frameworks for building custom systems**: Combine **code-review-graph** for a local-first SQLite graph with risk-scored PR review , **CodeSpy** for a model-agnostic CLI review pipeline with native GitHub annotations , and **SonarQube Community Build** for free static analysis across 21 languages —all without per-seat or per-credit SaaS fees.
-
-## How to Contribute
-
-1. Fork the repo.
-2. Add/edit entries in `README.md` (follow existing format).
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-4. Submit PR with a short explanation.
-
-Star the repo if you find it useful!
-
-## Disclaimer
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-- Automated code review tools post comments to pull requests and may access source code; enforce least-privilege repository scopes, avoid sending proprietary code to external services without review, and validate AI-generated findings before acting on them.
-- **Pricing models in this category have hidden traps that compound.** **Bito's overage is $5 per 1,000 LOC**—a 50-developer team with large PRs can easily exceed the 5,000 LOC/seat/month quota, and **unused quota does not roll over** . **Qodo's credits expire monthly**—pick a plan that fits typical usage or you leave credits on the table . **Reviewpad scored poorly in independent testing** (22 issues, ~19% coverage) despite its $89/month price—validate quality before committing . **CodeRabbit's free tier is genuinely useful** for PR summarization, and **OSS projects get Team features free** . **Open-source options require engineering effort**: code-review-graph is powerful but its 528x token reduction is best-case, not typical (~63x median) , and okf-generator/dagayn/gfy are graph builders rather than turnkey PR reviewers . **Validate whether you need a managed AI reviewer (CodeRabbit, Qodo), a security-focused PR check (Snyk), or a self-hosted knowledge graph (code-review-graph)** before committing.
+Accelerate code reviews, detect security vulnerabilities, automate pull request triage, and index complex repositories into queryable AST/graph models for coding agents (Claude Code, Cursor, Codex, OpenCode, and Gemini).
 
 ---
 
-**Made for engineering leaders, platform teams, and developers building automated review infrastructure.**  
-Let's make automated code review and codebase knowledge graphs more open, auditable, and developer-friendly.
+## Table of Contents
+- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
+- [SaaS / Hosted Platforms](#saas--hosted-platforms)
+- [Open-Source GitHub Projects](#open-source-github-projects)
+- [How to Choose](#how-to-choose)
+- [How to Contribute](#how-to-contribute)
+- [Disclaimer](#disclaimer)
+
+---
+
+## Sector Overview & Market Dynamics
+
+The automated code review and developer productivity intelligence sector is experiencing hyper-growth, expanding alongside the global AI code tools and DevSecOps market valued at **$1.5B–$2.5B in 2026** and compounding at a **27%–48% CAGR** toward **$14B+ by 2032**. 
+
+The market dynamics reflect a **moderately fragmented sector in active transition toward platform consolidation**:
+- **Consolidation at the Workflow Edge:** Established developer platform and IDE vendors (such as Cursor's acquisition of Graphite) and DevSecOps incumbents (like Snyk) are competing aggressively to absorb review loops into end-to-end coding workflows.
+- **Agentic Review & Code Intelligence Specialization:** Dedicated review engines (CodeRabbit, Qodo) and local-first code knowledge graph architectures (Tree-sitter SQLite/Neo4j/MCP indexes) maintain defensible differentiation by solving LLM token exhaustion, context drift, and cross-repository structural impact analysis that general-purpose coding LLMs miss.
+
+---
+
+## SaaS / Hosted Platforms
+
+A comparison of leading hosted automated code review, PR analysis, and developer security platforms. Sorted in descending order by enterprise company size (valuation / funding / revenue scale).
+
+| Product | Company Size (Valuation / Revenue) | Starting Pricing (Paid Tiers) | Free Tier / Trial Limits | Key Capabilities |
+| :--- | :--- | :--- | :--- | :--- |
+| **[Snyk](https://snyk.io/)** | **~$7.4B valuation** ($309M+ revenue / $326M ARR) | **$25/mo per contributing developer** (Team plan billed monthly); **$1,260/dev/year** (~$105/mo) for Ignite plan | **Free forever plan**: $0/mo for individual developers & small teams (includes up to 200 open-source test scans/mo, 100 code test scans/mo, and 300 container scans/mo) | Developer-first security analysis, automated SAST, dependency/container scanning, SARIF/PR status checks, and license compliance. |
+| **[CodeRabbit](https://www.coderabbit.ai/)** | **$1.5B valuation** (Series C $143M in Aug 2026; >5x YoY ARR growth) | **$24/dev/mo** billed annually (**$30/dev/mo** billed monthly) for Essentials plan; **$48/dev/mo** for Team plan | **Free forever plan**: $0 for unlimited public & private repositories (limited to PR summaries, release notes, and high-level reviews; inline automated review comments require Essentials). 14-day free trial on paid plans with unlimited reviews. Free Team tier for qualifying open-source repos. | Context-aware AI pull request reviews, automated line-by-line feedback, sequence diagrams, chat on PR diffs, and AST verification. |
+| **[Graphite](https://graphite.com/)** | **~$290M+ valuation** (Acquired by Cursor/Anysphere in Dec 2025; raised $72M+) | **$20/user/mo** billed annually for Starter plan; **$40/user/mo** billed annually for Team plan | **Free forever plan**: $0/mo for personal GitHub repositories & small hobby teams (includes stacked PR creation, CLI tool, and up to 10 AI PR reviews/mo). 14-day trial of Team features. | Stacked PR workflow automation, continuous merge queues, AI PR summaries, automated inline feedback, and fast code sync. |
+| **[Qodo](https://www.qodo.ai/)** | **~$280M valuation** (Series B $70M in Mar 2026; $120M total raised) | **$30/mo base** for Pro Team (includes pooled credits at $0.015/credit; ~14 reviews/mo at 2,000 credits, ~114 reviews/mo at 16,000 credits) | **14-day free trial** with unlimited AI review and test generation. **No permanent free tier** on hosted Pro; free community CLI version available via open-source `pr-agent`. | Agentic PR reviews with whole-codebase contextual awareness, automated test generation, PR descriptions, and custom merge rules. |
+| **[Codacy](https://www.codacy.com/)** | **~$50M–$100M valuation** ($7.3M estimated ARR; $32M raised) | **$15/dev/mo** billed annually (**$18–$21/dev/mo** billed monthly) for Pro plan | **Free forever plan**: $0/mo for open-source repositories with unlimited public repos and full static analysis; 14-day free trial of Pro plan with full access for private repositories. | Automated static code analysis across 40+ languages, code coverage tracking, technical debt metrics, security analysis, and AI auto-fix. |
+| **[Bito](https://bito.ai/)** | **~$8.9M total funding raised** (Seed-stage enterprise software startup) | **$20/seat/mo** billed annually (**$25/seat/mo** billed monthly) for Professional plan (includes 5,000 LOC/seat/mo; overage at $5 per 1,000 LOC) | **14-day free trial**: capped at 15 code review executions per user; large PRs cannot be manually triggered during trial. Free tier for basic personal AI assistant extension. | AI code reviews, automated PR summaries, line-of-code tracking, DSPy & LLM-assisted linting, and developer agent routing. |
+| **[Reviewpad](https://reviewpad.com/)** | **~$1.5M total funding raised** (€1M Seed stage) | **$89/month** starting flat tier for team automation | **14-day free trial** with full access to policy engine and GitHub Action review integrations. No permanent free tier for private orgs. | Policy-based PR automation, rule-driven labels and routing, merge gates, and AI-assisted reviewer assignment. |
+
+---
+
+## Open-Source GitHub Projects
+
+Self-hosted, transparent, and community-driven tools for automated code review, AST knowledge graph indexing, and PR workflow automation.
+
+> **Sorted in descending order by GitHub Stars.** Each repository name includes a real-time star badge linking directly to the repository's stargazers.
+
+- ### [codegraph](https://github.com/colbymchenry/codegraph) [![GitHub stars](https://img.shields.io/github/stars/colbymchenry/codegraph?style=social&color=white)](https://github.com/colbymchenry/codegraph/stargazers)
+  **Pre-indexed code knowledge graph for local and cloud AI coding agents.**  
+  Auto-syncs on source code changes to feed Claude Code, Codex, Gemini, Cursor, and OpenCode with localized structural intelligence. Provides ~100% local operation with dramatic token overhead reduction and minimal tool calls.
+
+- ### [code-review-graph](https://github.com/tirth8205/code-review-graph) [![GitHub stars](https://img.shields.io/github/stars/tirth8205/code-review-graph?style=social&color=white)](https://github.com/tirth8205/code-review-graph/stargazers)
+  **Local-first code knowledge graph for AI agents and risk-scored PR reviews.**  
+  Builds a persistent SQLite graph of functions, classes, imports, and calls using Tree-sitter without requiring an external database. Emits sticky GitHub Action comments with symbol-level risk scoring, execution flows, and test gap analysis. Yields ~63x median per-question token reduction for MCP coding agents.
+
+- ### [tree-sitter](https://github.com/tree-sitter/tree-sitter) [![GitHub stars](https://img.shields.io/github/stars/tree-sitter/tree-sitter?style=social&color=white)](https://github.com/tree-sitter/tree-sitter/stargazers)
+  **The parsing engine foundation for modern codebase knowledge graphs.**  
+  An incremental parsing system that builds concrete syntax trees (CST/AST) for source files across dozens of programming languages. Serves as the core syntax indexing engine powering `code-review-graph`, `codegraph`, `okf-generator`, and automated code review AST parsers.
+
+- ### [semgrep](https://github.com/semgrep/semgrep) [![GitHub stars](https://img.shields.io/github/stars/semgrep/semgrep?style=social&color=white)](https://github.com/semgrep/semgrep/stargazers)
+  **Lightweight static analysis engine for code review and security enforcement.**  
+  Fast, syntax-aware pattern matching for searching code and enforcing secure coding standards in CI/CD pipelines. Uses code-like syntax instead of complex AST queries to detect bugs, CVEs, and compliance issues on every pull request.
+
+- ### [pr-agent](https://github.com/qodo-ai/pr-agent) [![GitHub stars](https://img.shields.io/github/stars/qodo-ai/pr-agent?style=social&color=white)](https://github.com/qodo-ai/pr-agent/stargazers)
+  **Open-source autonomous AI agent for pull request review and analysis.**  
+  Posts inline PR code suggestions, generates structured pull request descriptions, answers natural language questions on code diffs, and evaluates PR compliance across GitHub, GitLab, and Bitbucket. Supports custom LLM endpoints (Ollama, LiteLLM, OpenAI, Anthropic).
+
+- ### [infer](https://github.com/facebook/infer) [![GitHub stars](https://img.shields.io/github/stars/facebook/infer?style=social&color=white)](https://github.com/facebook/infer/stargazers)
+  **Static analyzer for Java, C, C++, and Objective-C by Meta.**  
+  Employs deep formal methods (separation logic) to find critical memory leaks, null pointer exceptions, and concurrency race conditions before code lands in production. Widely integrated into automated commit and PR gating pipelines.
+
+- ### [sonarqube](https://github.com/SonarSource/sonarqube) [![GitHub stars](https://img.shields.io/github/stars/SonarSource/sonarqube?style=social&color=white)](https://github.com/SonarSource/sonarqube/stargazers)
+  **Continuous code quality, vulnerability inspection, and static analysis.**  
+  Analyzes 20+ languages to flag bugs, security hotspots, code smells, and technical debt. Connects directly to GitHub, GitLab, and Azure DevOps pull requests with SARIF report ingestion and customizable quality gates.
+
+- ### [reviewdog](https://github.com/reviewdog/reviewdog) [![GitHub stars](https://img.shields.io/github/stars/reviewdog/reviewdog?style=social&color=white)](https://github.com/reviewdog/reviewdog/stargazers)
+  **Automated code review runner with unified diff reporting.**  
+  Integrates any linter or static analysis tool with code review services. Automatically parses linter output and posts inline comments directly on GitHub Pull Requests, GitLab Merge Requests, and Bitbucket PRs.
+
+- ### [danger](https://github.com/danger/danger) [![GitHub stars](https://img.shields.io/github/stars/danger/danger?style=social&color=white)](https://github.com/danger/danger/stargazers)
+  **Automate team pull request review conventions & chore policies.**  
+  Codifies social team norms during code review (e.g., verifying changelog updates, enforcing test coverage, checking PR size, and auditing milestone tags) with native comments on GitHub and GitLab.
+
+- ### [codesearch](https://github.com/google/codesearch) [![GitHub stars](https://img.shields.io/github/stars/google/codesearch?style=social&color=white)](https://github.com/google/codesearch/stargazers)
+  **Fast, regular-expression-based search indexing over massive codebases.**  
+  Google's trigram indexing engine for navigating large-scale source repositories. Used as a reference implementation for regex code navigation and high-speed structural symbol lookups.
+
+- ### [kythe](https://github.com/google/kythe) [![GitHub stars](https://img.shields.io/github/google/kythe?style=social&color=white)](https://github.com/google/kythe/stargazers)
+  **Pluggable developer tools platform for code analysis and cross-reference graphs.**  
+  Google's ecosystem for creating and querying language-agnostic code graphs. Captures definitions, references, call graphs, and type hierarchies across multi-language enterprise repositories.
+
+- ### [scip](https://github.com/sourcegraph/scip) [![GitHub stars](https://img.shields.io/github/stars/sourcegraph/scip?style=social&color=white)](https://github.com/sourcegraph/scip/stargazers)
+  **SCIP Code Intelligence Protocol by Sourcegraph.**  
+  A modern, language-agnostic protocol for indexing source code symbol graphs, cross-references, and type relationships. Powers precise jump-to-definition, find-references, and code navigation in review workflows.
+
+- ### [graphicle](https://github.com/Graphicle-AI/graphicle) [![GitHub stars](https://img.shields.io/github/stars/Graphicle-AI/graphicle?style=social&color=white)](https://github.com/Graphicle-AI/graphicle/stargazers)
+  **Rust-native code graph and project memory system over MCP.**  
+  Combines architectural symbol graphs with historical review decisions directly in a single Rust engine. Integrates with coding agents to preserve context and suppress stale review suggestions.
+
+- ### [RepoLens](https://github.com/TheMorpheus407/RepoLens) [![GitHub stars](https://img.shields.io/github/stars/TheMorpheus407/RepoLens?style=social&color=white)](https://github.com/TheMorpheus407/RepoLens/stargazers)
+  **Multi-perspective AI code audit and production readiness evaluation.**  
+  Deploys specialized agents across security, architecture, and reliability perspectives. Includes opt-in local learning indexes and plugins for Semgrep, Gitleaks, and OSV.
+
+- ### [dagayn](https://github.com/manji-0/dagayn) [![GitHub stars](https://img.shields.io/github/stars/manji-0/dagayn?style=social&color=white)](https://github.com/manji-0/dagayn/stargazers)
+  **Local-first code knowledge graph with multi-backend embeddings.**  
+  Parses source files, Markdown, and Terraform infrastructure into an SQLite call graph. Offers FTS-only fast search, local GGUF sidecar embeddings, and remote vector lookups for AI agent review pipelines.
+
+- ### [okf-generator](https://github.com/tommypacker/okf-generator) [![GitHub stars](https://img.shields.io/github/stars/tommypacker/okf-generator?style=social&color=white)](https://github.com/tommypacker/okf-generator/stargazers)
+  **Map any codebase into an Open Knowledge Format (OKF) graph for AI agents.**  
+  Tree-sitter parser covering 11 languages and 17 package/build manifests. Exports code architectures into GraphML, Neo4j Cypher, Obsidian vaults, and D3 force-directed interactive diagrams.
+
+- ### [gfy](https://github.com/qiangli/gfy) [![GitHub stars](https://img.shields.io/github/stars/qiangli/gfy?style=social&color=white)](https://github.com/qiangli/gfy/stargazers)
+  **Go-based code knowledge graph CLI with semantic graph traversal.**  
+  CLI tool for calculating shortest symbol paths, fuzzy code queries, and local semantic embeddings via Ollama. Exposes MCP configuration for Claude Code and Cursor.
+
+- ### [codeKG](https://github.com/eviking/codeKG) [![GitHub stars](https://img.shields.io/github/stars/eviking/codeKG?style=social&color=white)](https://github.com/eviking/codeKG/stargazers)
+  **Neo4j-backed codebase knowledge graph for AI developer agents.**  
+  Parses repository definitions and dependencies into a Neo4j graph database. Generates commit-level `.codekg/INDEX.md` context maps and monitors codebases for incremental re-indexing.
+
+---
+
+## How to Choose
+
+| Requirement | Recommended Solution |
+| :--- | :--- |
+| **Instant PR summaries and conversational AI review** | [CodeRabbit](https://www.coderabbit.ai/) or [Graphite](https://graphite.com/) |
+| **Local-first code review with 0 external token exposure** | [code-review-graph](https://github.com/tirth8205/code-review-graph) or [codegraph](https://github.com/colbymchenry/codegraph) |
+| **Open-source self-hosted PR agent for GitHub / GitLab** | [pr-agent](https://github.com/qodo-ai/pr-agent) |
+| **Enterprise static analysis and quality gates** | [SonarQube](https://github.com/SonarSource/sonarqube) or [Codacy](https://www.codacy.com/) |
+| **Deep security, secrets, and dependency vulnerability scanning** | [Snyk](https://snyk.io/) or [Semgrep](https://github.com/semgrep/semgrep) |
+| **Formal verification of memory leaks & concurrency bugs** | [Infer](https://github.com/facebook/infer) |
+| **Cross-repository symbol intelligence and code graphing** | [SCIP](https://github.com/sourcegraph/scip) or [Kythe](https://github.com/google/kythe) |
+
+---
+
+## How to Contribute
+
+1. Fork this repository.
+2. Add your tool to either the **SaaS / Hosted Platforms** table or the **Open-Source GitHub Projects** list.
+   - For SaaS products: provide exact pricing tiers, specific free tier/trial limits, and company scale metrics.
+   - For Open-Source projects: provide the GitHub repository link and ensure the social star badge (`style=social&color=white`) links to `/stargazers`.
+3. Submit a Pull Request with a clear description of the project.
+
+---
+
+## Disclaimer
+
+- This repository is a community-curated educational resource and does not constitute formal endorsement.
+- Automated code review tools process source code and pull request data. Always enforce least-privilege repository permissions, audit third-party data retention policies, and verify automated code modifications before merging.
